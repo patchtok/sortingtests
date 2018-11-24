@@ -24,7 +24,9 @@ def partition(A,p,r):
     q=p
     for u in range(p,r):
         if A[u]<=A[r]:
+            print(A)
             A=swap(A,q,u)
+            print(A)
             q+=1
     A=swap(A,q,r)
     return q
@@ -57,15 +59,17 @@ d=[]
 e=[3]
 f=[6,0,5,8,2,2]
 g=[]
+h=[5,9,11,1,7,3]
 for i in range(0,100000):
     g.append(random.randint(0, 10000))
     #g.append(-i)
 
-y=g
+y=h
+print(y)
 print("Start sort")
 y=quickSort_I(y,0,len(y)-1)
 print("Sorting completed")
-#print(y)
+print(y)
 print(checkOrder(y))
 
 
